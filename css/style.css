@@ -1,0 +1,14 @@
+#Welcome {
+    color: black;
+
+    background-color: cornflowerblue;
+    text-align: center;
+
+
+}
+
+body main p {
+ font-family: fantasy;
+ font-style: italic;
+ line-height: 21px;
+}
