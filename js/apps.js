@@ -16,6 +16,7 @@ if (catsLove === 'yes' || catsLove === 'y' )
 {
 
   alert('Correct! , Of course i do !') ;
+  z++;
 
 
 }
@@ -41,6 +42,7 @@ if ( myStrength=== 'yes' || myStrength=== 'y' )
 {
 
   alert('True , at least i like to think so') ;
+  z++;
 
 }
 else
@@ -136,7 +138,7 @@ while(!guessAge) {
   guessAge = parseInt(guessAge);
 }
 
-for (x>0 ; x--;) {
+for (; x > 0; x--) {
 
   if (guessAge === 26)
   {
@@ -149,62 +151,66 @@ for (x>0 ; x--;) {
   }
   else if (guessAge < 20 ) {
     alert('Too low');
-    guessAge = prompt('How old am i ? (you have ' + x + ' iteration to guess ^_^ )');
+    
+    guessAge = prompt('How old am i ? (you have ' + (x-1) + ' iteration to guess ^_^ )');
     guessAge = parseInt(guessAge);
 
     while(!guessAge) {
       alert('Please Enter a number');
-      guessAge = prompt('How old am i ? (you have ' + x + ' iteration to guess ^_^ )');
+      guessAge = prompt('How old am i ? (you have ' + (x-1) + ' iteration to guess ^_^ )');
       guessAge = parseInt(guessAge);
     }
 
   } else if (guessAge > 35) {
     alert('Too high');
 
-    guessAge = prompt('How old am i ? (you have ' + x + ' iteration to guess ^_^ )');
+    guessAge = prompt('How old am i ? (you have ' + (x-1) + ' iteration to guess ^_^ )');
     guessAge = parseInt(guessAge);
 
     while(!guessAge) {
       alert('Please Enter a number');
-      guessAge = prompt('How old am i ? (you have ' + x + ' iteration to guess ^_^ )');
+      guessAge = prompt('How old am i ? (you have ' + (x-1)+ ' iteration to guess ^_^ )');
       guessAge = parseInt(guessAge);
     }
 
   } else{
     alert('Wrong');
 
-    guessAge = prompt('How old am i ? (you have ' + x + ' iteration to guess ^_^ )');
+    guessAge = prompt('How old am i ? (you have ' + (x-1) + ' iteration to guess ^_^ )');
     guessAge = parseInt(guessAge);
 
     while(!guessAge) {
       alert('Please Enter a number larger');
-      guessAge = prompt('How old am i ? (you have ' + x + ' iteration to guess ^_^ )');
+      guessAge = prompt('How old am i ? (you have ' + (x-1) + ' iteration to guess ^_^ )');
       guessAge = parseInt(guessAge);
     }
 
   }
 }
-let favFoodFood = prompt('can you guess what food i like?').toLowerCase();
-let favFood = ['burger' , 'shawrma' , 'kabsah', 'mansaf', 'grilles' ];
-for (let i =0 ; i < favFood.length; i++ ) {
-  if (favFoodFood === favFood[i]){
-    alert('Correct!');
-    z++;
-    break;}
-  if (i === 4) {
-    alert('wrong');
-    break;
+let flag1 = 0;
+let ittrCount = 6;
+let favFoodFood = prompt('can you guess what food i like? '+ittrCount+' iteration(s) left' ).toLowerCase();
+let favFood = ['burger' , 'shawrma' , 'kabsah', 'mansaf', 'grilles'];
+for (let count= 0 ; count < 6 ; count++ ){
+  for (let i =0 ; i < favFood.length; i++ ) {
+    console.log('Counter is ',count);
+    if (favFoodFood === favFood[i]){
+      alert('Correct!');
+      z++;
+      flag1 = 1;
+      break;}
+    if (i === 4) {
+      alert('wrong');
+      break;
+
+    }
 
   }
+  if (flag1) {break;}
+  ittrCount = ittrCount-1;
+  favFoodFood = prompt('can you guess what food i like? '+ittrCount+' iterations left' ).toLowerCase();
+
 }
 alert('Your score is '+z+'/7');
-
-
-
-
-
-
-
-
 
 
