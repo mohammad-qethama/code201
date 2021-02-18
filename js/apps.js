@@ -11,7 +11,7 @@ function catsQuestion(){
 
 
   }
-  console.log(catsLove);
+
 
   if (catsLove === 'yes' || catsLove === 'y' )
   {
@@ -39,7 +39,7 @@ function patienceQuestion(){
     myStrength = myStrength.toLowerCase();
 
   }
-  console.log(myStrength);
+
 
   if ( myStrength=== 'yes' || myStrength=== 'y' )
   {
@@ -67,7 +67,7 @@ function sugarQuestion(){
     foodPref = foodPref.toLowerCase();
 
   }
-  console.log(foodPref);
+
 
   if ( foodPref === 'yes' || foodPref === 'y' )
   {
@@ -94,7 +94,7 @@ function bookQuestion(){
     readingPref = readingPref.toLowerCase();
 
   }
-  console.log(readingPref);
+
 
   if ( readingPref === 'yes' || readingPref === 'y' )
   {
@@ -121,17 +121,17 @@ function arabicLanguage(){
     langPref = langPref.toLowerCase();
 
   }
-  console.log(langPref);
+
 
   if ( langPref=== 'yes' || langPref=== 'y' )
   {
 
-    alert('Yes, i do and it is  also the most beautifull one. ') ;
+    alert('Yes, i do and it is  also the most beautiful one. ') ;
     z++;
   }
   else
   {
-    alert('wrong you are extremly wrong.') ;
+    alert('wrong you are extremely wrong.') ;
 
 
   }
@@ -140,7 +140,6 @@ arabicLanguage();
 
 function userName (){
   let userNAME = prompt('What is your name ? ');
-  console.log('his Name is '+ userNAME);
 
   document.getElementById('Welcome').innerHTML = 'Welcome ' +userNAME +' <i class="fas fa-atom"></i>';
 }
@@ -205,7 +204,7 @@ function favouriteFood(){
   let favFood = ['burger' , 'shawrma' , 'kabsah', 'mansaf', 'grilles'];
   for (let count= 0 ; count < 6 ; count++ ){
     for (let i =0 ; i < favFood.length; i++ ) {
-      console.log('Counter is ',count);
+
       if (favFoodFood === favFood[i]){
         alert('Correct!');
         z++;

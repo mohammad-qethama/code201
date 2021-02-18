@@ -2,16 +2,16 @@ body{
 width: 960px;
 
 margin: auto;
-background-color: grey;
+background-color:#000000;
 }
 body main{
- background-color:beige;
-
+ background-color:#090909;
+ color: gray; 
 }
 #Welcome {
-    color: black;
+    color:#2b5564;
 
-    background-color: cornflowerblue;
+    background-color: #1d1d1d;
     text-align: center;
 
 
@@ -23,7 +23,18 @@ body main {
  line-height: 21px;
 }
 body main ol li:nth-child(odd){
-background-color: burlywood;
-color:rgb(35, 66, 20);
+background-color: #0589aa;
+color:#203e4a;
+font-weight: bolder;
 
 }
+img{
+    display: block; 
+    margin:auto;
+    width: 13em;
+    border-style: solid;
+    border-radius: 1em;
+    box-shadow: -20px 15px 10px -5px #203e4a;
+    
+    
+    }
